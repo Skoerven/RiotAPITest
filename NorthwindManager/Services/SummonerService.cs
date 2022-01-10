@@ -13,7 +13,7 @@ namespace NorthwindManager.Services
 {
     public class SummonerService
     {
-        private const string token = "RGAPI-29a84c28-31a0-452b-8cb6-0d712c22cc04";
+        private const string token = "";
       
         private WebResponse webResponse;
         private Stream webStream;
