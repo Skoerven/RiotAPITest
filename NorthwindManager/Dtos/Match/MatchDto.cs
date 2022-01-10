@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace RiotManagerDb
+namespace NorthwindManager.Dtos
 {
    public class MatchDto
     {

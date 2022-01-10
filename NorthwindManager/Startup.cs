@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using NorthwindManager.Helper;
 using NorthwindManager.Services;
 using RiotManagerDb;
 using System;
@@ -34,6 +35,7 @@ namespace NorthwindManager
       Console.WriteLine($"connectionString={connectionString}");
       services.AddDbContext<RiotManagerContext>(options => options.UseSqlite(connectionString));
             services.AddScoped<SummonerService>();
+            services.AddScoped<DtoConverter>();
 
       services.AddCors(options =>
       {

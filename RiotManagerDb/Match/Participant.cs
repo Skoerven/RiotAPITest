@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SQLite;
 
 namespace RiotManagerDb
 {
-   public class Participant
+    public class Participant
     {
-       
-        public string matchid { get; set; }
+        [AutoIncrement]
+        public long Id { get; set; }
+        public long teamId { get; set; }
         public int assists { get; set; }
         public int baronKills { get; set; }
         public int bountyLevel { get; set; }
@@ -63,6 +62,7 @@ namespace RiotManagerDb
         public int objectivesStolenAssists { get; set; }
         public int participantId { get; set; }
         public int pentaKills { get; set; }
+        public Perks perks { get; set; }
         public int physicalDamageDealt { get; set; }
         public int physicalDamageDealtToChampions { get; set; }
         public int physicalDamageTaken { get; set; }
@@ -85,7 +85,6 @@ namespace RiotManagerDb
         public int summonerLevel { get; set; }
         public string summonerName { get; set; }
         public bool teamEarlySurrendered { get; set; }
-        public int teamId { get; set; }
         public string teamPosition { get; set; }
         public int timeCCingOthers { get; set; }
         public int timePlayed { get; set; }

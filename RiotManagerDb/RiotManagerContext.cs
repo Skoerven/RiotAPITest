@@ -20,23 +20,24 @@ namespace RiotManagerDb
         }
 
         public virtual DbSet<Summoner> Summoners { get; set; }
-        public virtual DbSet<Matches> Matches { get; set; }
-        public virtual DbSet<Participant> Participants { get; set; }
-        
+        public virtual DbSet<MatchIdStorage> MatchesInfo { get; set; }
+        public virtual DbSet<Match> Matches { get; set; }
+        public virtual DbSet<Info> Infos { get; set; }
+        public virtual DbSet<MetaData> MetaDatas { get; set; }
+        public virtual DbSet<Team> Teams { get; set; }
+
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlite("data source=E:\\Temp\\rito.sqlite");
+                optionsBuilder.UseSqlite("data source=C:\\Temp\\rito.sqlite");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Matches>().HasKey(x => x.matchid);
-            modelBuilder.Entity<Participant>().HasKey(x => new {matchid = x.matchid, puuid = x.puuid });
-
 
         }
 

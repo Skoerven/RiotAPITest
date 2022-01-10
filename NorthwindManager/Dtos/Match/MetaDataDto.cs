@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RiotManagerDb
+namespace NorthwindManager.Dtos
 {
     public class MetaDataDto
     {

@@ -1,4 +1,4 @@
-﻿namespace RiotManagerDb
+﻿namespace NorthwindManager.Dtos
 {
     public class PerkStatsDto
     {
